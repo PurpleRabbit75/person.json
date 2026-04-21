@@ -7,7 +7,7 @@ Every `person.json` file must begin and end with opening and closing square brac
 ]
 ```
 
-These represent a JSON array. 
+These delineate a JSON array. The entirety of a `person.json` file is one big JSON array.
 
 The first entry of every `person.json` main array must be a string. It is strongly recommended that that string be the name of the person to whom the schedule belongs.
 
@@ -19,11 +19,11 @@ Because this is a JSON array, after every entry there must be a comma.
 ]
 ```
 
-The second entry of every `person.json` file must be an array. The array must be formatted like this:
+The second entry of every `person.json` file must be an array representing a schedule entry. The array must be formatted like this:
 
 `[[hr, min], [hr, min], "weekday_string"]]`
 
-That is, the array must contain an array, and array, and then a string. The first array represents the start time of the event. The second array represents the end time of the event. The third string represents the day(s) on which the event occurs.
+That is, the array must contain an array, a second array, and then a string. The first array represents the start time of the event. The second array represents the end time of the event. The third string represents the day(s) on which the event occurs.
 
 The first two arrays must be of length 2. The weekday string must be of length `1 <= Length <= 5`
 
@@ -74,4 +74,4 @@ Additionally, no spaces are required (though they are recommended for readabilit
 
 Optionally, after weekday_string, the schedule entries may include a "comment" string. No software should assume that a comment will be present, and a comment should not be reflected in the output of a program which accepts `person.json` files.
 
-For any further syntax questions, refer to [json.org](json.org)
+For any further syntax questions, refer to [json.org](https://json.org)
